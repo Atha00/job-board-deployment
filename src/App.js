@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Jobs from "./components/Jobs";
+// import data from "./assets/jobs.json";
+
+// console.log(data);
 
 function App() {
+  // const word = "Bonjour"
+  // const tab = [<p>{word}</p>, <p>Bonjour</p>, <p>Bonjour</p>];
+
+  // const array1 = [1, 4, 9, 16];
+  // const newTab = array1.map((x) => x * 2);
+
+  // console.log(newTab); // [2, 8, 18, 32]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header title="The Job Board" />
+      <Jobs />
+      <Footer />
+      {/* {newTab.map((element) => {
+        return <p>{element}</p>;
+      })} */}
+      {/* {data.map((job, index) => {
+        // console.log(job);
+        // console.log(index);
+        return (
+          <div key={index}>
+            <p>{job.title}</p>
+            <p>{job.contractType}</p>
+          </div>
+        );
+      })} */}
+    </>
   );
 }
 
